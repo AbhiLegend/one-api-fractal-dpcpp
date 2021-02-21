@@ -3,8 +3,13 @@ Enter the option to see fractals
 2. Cos 
 3. Tan 
 4. Mandel
+5. Lograrithmic
+6. conjugate
+7. conjugate sin
+8. conjugate sin
+9. exponent 
 Parallel Mandelbrot set using buffers.
  Rendered image output to file: mandelbrot.png (output too large to display in text)
-       Serial time: 3.19298s
-     Parallel time: 0.0342199s
+       Serial time: 0.420215s
+     Parallel time: 0.00545751s
 Successfully computed Mandelbrot set.

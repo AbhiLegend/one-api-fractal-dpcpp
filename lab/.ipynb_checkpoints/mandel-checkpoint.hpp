@@ -57,12 +57,6 @@ struct MandelParameters {
           return log((z)+c);
       case 6:
           return tan(complex_square(z)+c);
-      case 7:
-          return sin(complex_square(z)+c);
-      case 8:
-          return cos(complex_square(z)+c);
-       case 9:
-          return exp(complex_square(z))+c;
 
       default:
           return complex_square(z) + c;

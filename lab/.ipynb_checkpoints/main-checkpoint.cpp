@@ -3,10 +3,11 @@
 //
 // SPDX-License-Identifier: MIT
 // =============================================================
-
 #include <chrono>
 #include <iomanip>
 #include <iostream>
+#include <cstdio>
+
 
 // dpc_common.hpp can be found in the dev-utilities include folder.
 // e.g., $ONEAPI_ROOT/dev-utilities/<version>/include/dpc_common.hpp
@@ -73,16 +74,20 @@ int main(int argc, char *argv[]) {
   try {
     // Create a queue on the default device. Set SYCL_DEVICE_TYPE environment
     // variable to (CPU|GPU|FPGA|HOST) to change the device.
-    queue q(default_selector{}, dpc_common::exception_handler);
+   // queue q(default_selector{}, dpc_common::exception_handler);
+   queue q(gpu_selector{}, dpc_common::exception_handler);
 
     // Display the device info.
     ShowDevice(q);
+    freopen("input1.txt", "r", stdin);
+    freopen("output1.txt", "w", stdout);
 
     cout << "Enter the option to see fractals" << std::endl;
     cout << "1. Sin " << std::endl;
     cout << "2. Cos " << std::endl;
     cout << "3. Tan " << std::endl;
     cout << "4. Mandel" << std::endl;
+    cout << "5. Lograrithmic" << std::endl;
 
 
     int choice;

@@ -74,7 +74,8 @@ int main(int argc, char *argv[]) {
   try {
     // Create a queue on the default device. Set SYCL_DEVICE_TYPE environment
     // variable to (CPU|GPU|FPGA|HOST) to change the device.
-    queue q(default_selector{}, dpc_common::exception_handler);
+   // queue q(default_selector{}, dpc_common::exception_handler);
+   queue q(gpu_selector{}, dpc_common::exception_handler);
 
     // Display the device info.
     ShowDevice(q);
@@ -86,6 +87,11 @@ int main(int argc, char *argv[]) {
     cout << "2. Cos " << std::endl;
     cout << "3. Tan " << std::endl;
     cout << "4. Mandel" << std::endl;
+    cout << "5. Lograrithmic" << std::endl;
+    cout << "6. conjugate" << std::endl;
+    cout << "7. conjugate sin" << std::endl;
+    cout << "8. conjugate sin" << std::endl;
+    cout << "9. exponent " << std::endl;
 
 
     int choice;
@@ -102,3 +108,4 @@ int main(int argc, char *argv[]) {
   cout << "Successfully computed Mandelbrot set.\n";
   return 0;
 }
+
