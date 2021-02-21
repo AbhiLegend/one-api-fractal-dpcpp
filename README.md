@@ -99,3 +99,6 @@ Rendered image output to file: mandelbrot.png (output too large to display in te
      Parallel time: 0.00224131s
 Successfully computed Mandelbrot set.
 ```
+
+### Running the application
+
