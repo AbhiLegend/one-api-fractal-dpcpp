@@ -100,5 +100,9 @@ Rendered image output to file: mandelbrot.png (output too large to display in te
 Successfully computed Mandelbrot set.
 ```
 
-### Running the application
+### How was the learning experience
+Good
+Easy to get started,good amount of examples,Ready template availables
+Bad
+Very hard to attain basics,too much time required  to adapt to DPC++
 
