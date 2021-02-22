@@ -101,8 +101,8 @@ Successfully computed Mandelbrot set.
 ```
 
 ### How was the learning experience
-Good
+## Good
 Easy to get started,good amount of examples,Ready template availables
-Bad
+## Bad
 Very hard to attain basics,too much time required  to adapt to DPC++
 
