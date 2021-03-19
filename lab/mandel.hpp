@@ -11,6 +11,7 @@
 #include <iomanip>
 #include <iostream>
 #include <string>
+#include <cmath>
 
 // stb/*.h files can be found in the dev-utilities include folder.
 // e.g., $ONEAPI_ROOT/dev-utilities/<version>/include/stb/*.h
@@ -63,6 +64,37 @@ struct MandelParameters {
           return cos(complex_square(z)+c);
        case 9:
           return exp(complex_square(z))+c;
+       case 10:
+          return log(complex_square(z) + c);
+       case 11:
+          return log(tan(complex_square(z) + c));
+       case 12:
+          return log(atan(complex_square(z) + c));
+       case 13:
+          return log(atan(complex_square(z) + sin(complex_square(z) + c)));
+       case 14:
+          return (acos(complex_square(z) + asin(complex_square(z) + c)));
+       case 15:
+          return (cos(complex_square(z) + sin(complex_square(z) + c)));
+       case 16:
+          return (tan(complex_square(z) + sin(complex_square(z) + c)));
+       case 17:
+          return (tan(complex_square(z) + cos(complex_square(z) + c)));
+       case 18:
+          return (tan(complex_square(z) + cos(z) + c));
+       case 19:
+          return (tan(z) + cos(z) + c);
+       case 20:
+          return (exp(z) + c);
+       case 21:
+          return ((z) + complex_square(z) + c);
+       case 22:
+          return (exp(z*z*z) + complex_square(z) + c);
+       case 23:
+          return ((z*z*z) + z + c);
+       
+       
+              
 
       default:
           return complex_square(z) + c;

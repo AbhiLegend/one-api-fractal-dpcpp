@@ -7,6 +7,7 @@
 #include <iomanip>
 #include <iostream>
 #include <cstdio>
+#include <cmath>
 
 
 // dpc_common.hpp can be found in the dev-utilities include folder.
@@ -92,6 +93,20 @@ int main(int argc, char *argv[]) {
     cout << "7. conjugate sin" << std::endl;
     cout << "8. conjugate sin" << std::endl;
     cout << "9. exponent " << std::endl;
+    cout << "10. logarithmic " << std::endl;
+    cout << "11. log tan " << std::endl;
+    cout << "12. log tan and sin " << std::endl;
+    cout << "13. log tan and sin " << std::endl;
+    cout << "14. arc of sin and cos " << std::endl;
+    cout << "15. sin and cos mandel " << std::endl;
+    cout << "16. tan and sin mandel " << std::endl;
+    cout << "17. tan and cos mandel " << std::endl;
+    cout << "18. tan complex and cos mandel " << std::endl;
+    cout << "19. sin complex and cos complex " << std::endl;
+    cout << "20. exponential and cos " << std::endl;
+    cout << "21. Normal z and square z " << std::endl;
+    cout << "22. z cubed  and square z " << std::endl;
+    cout << "23. z cubed square z and z  " << std::endl;
 
 
     int choice;

@@ -8,8 +8,22 @@ Enter the option to see fractals
 7. conjugate sin
 8. conjugate sin
 9. exponent 
+10. logarithmic 
+11. log tan 
+12. log tan and sin 
+13. log tan and sin 
+14. arc of sin and cos 
+15. sin and cos mandel 
+16. tan and sin mandel 
+17. tan and cos mandel 
+18. tan complex and cos mandel 
+19. sin complex and cos complex 
+20. exponential and cos 
+21. Normal z and square z 
+22. z cubed  and square z 
+23. z cubed square z and z  
 Parallel Mandelbrot set using buffers.
  Rendered image output to file: mandelbrot.png (output too large to display in text)
-       Serial time: 0.420215s
-     Parallel time: 0.00545751s
+       Serial time: 0.0542023s
+     Parallel time: 0.00133771s
 Successfully computed Mandelbrot set.
