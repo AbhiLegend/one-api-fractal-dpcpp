@@ -14,6 +14,8 @@ For comprehensive instructions regarding DPC++ Programming, go to https://softwa
 
 ## Purpose
 Mandelbrot is a DPC++ application that generates a fractal image by initializing a matrix of 512 x 512, where the computation at each point (pixel) is entirely independent of the computation at other points. The sample includes both parallel and serial calculation of the set, allowing for a direct comparison of results. The parallel implementation can demonstrate the use of Unified Shared Memory (USM) or buffers. You can modify parameters such as the number of rows, columns, and iterations to evaluate the difference in performance and load between USM and buffers. This is further described at the end of this document in the "Running the Sample" section.
+## Update
+Major fractal functions covered
 
 The code will attempt first to execute on an available GPU and fallback to the system's CPU if a compatible GPU is not detected.  The device used for compilation is displayed in the output along with elapsed time to render the mandelbrot image. This is helpful for comparing different offload implementations based on complexity of the computation. 
 
@@ -77,13 +79,6 @@ $ make
 
 
 ## Running the Sample
-### Application Parameters 
-You can modify the Mandelbrot parameters from within mandel.hpp. The configurable parameters include:
-    row_size = 
-    col_size =
-    max_iterations =
-    repetitions =
-The default row and column size is 512.  Max interatins and repetions are both 100.  By adjusting the parameters, you can observe how the performance varies using the different offload techniques.  Note that if the values drop below 128 for row and column, the output is limted to just text in the ouput window.
 
 ### Example of Output
 ```
@@ -105,4 +100,61 @@ Successfully computed Mandelbrot set.
 Easy to get started,good amount of examples,Ready template availables
 ## Bad
 Very hard to attain basics,too much time required  to adapt to DPC++
+
+
+## Update new code
+We use One API Devcloud to find different solutions to fractals
+How to use it?
+In the input.txt file change your paramater no.s
+Its currently numbered from 1 to 10
+The Ipython notebook is self explanatory run it and you will see a new fractal being created using the parameters
+Just Change a number say 1 to 2... save it and run the ipython notebook
+
+Major Fractals covered.
+
+We have covered lots of variants of Fractal functions that are there utilizing lots of trignometric functions with different values to get the desired results in the DPC++ format.
+## Ran the code with Iris Max option on Devcloud
+nodes=1:iris_xe_max:ppn=2
+## The following output was achieved.
+813427.v-qsvr-1 ...ub-singleuser u58899 00:00:55 R jupyterhub 813470.v-qsvr-1 run-fractal.sh u58899 0 Q batch
+Waiting for Output █████████████████████ Done⬇
+########################################################################
+Date: Thu 18 Mar 2021 03:21:37 PM PDT
+Job ID: 813470.v-qsvr-1.aidevcloud
+User: u58899
+Resources: neednodes=1:iris_xe_max:ppn=2,nodes=1:iris_xe_max:ppn=2,walltime=06:00:00
+########################################################################
+u58899 is compiling Fractal DPCPP
+Platform Version: 1.0 Device Name: Intel(R) Graphics [0x4905] Max Work Group: 512 Max Compute Units: 96
+########################################################################
+End of output for job 813470.v-qsvr-1.aidevcloud
+Date: Thu 18 Mar 2021 03:21:55 PM PDT
+########################################################################
+
+## The functions that are used to form different Fractals
+exp() function
+complex_square(z) + z
+
+exponential z (power cubed) + complex(squarez)
+z(cubed) + complex(square z) + z
+
+plus more....
+
+## quad Intel® Iris® Xe MAX Graphics compute node
+nodes=1:iris_xe_max:dual_gpu:ppn=2
+
+813427.v-qsvr-1 ...ub-singleuser u58899 00:01:09 R jupyterhub 813488.v-qsvr-1 run-fractal.sh u58899 0 Q batch
+Waiting for Output █████████████████████ Done⬇
+########################################################################
+Date: Thu 18 Mar 2021 03:47:01 PM PDT
+Job ID: 813488.v-qsvr-1.aidevcloud
+User: u58899
+Resources: neednodes=1:iris_xe_max:dual_gpu:ppn=2,nodes=1:iris_xe_max:dual_gpu:ppn=2,walltime=06:00:00
+########################################################################
+u58899 is compiling Fractal DPCPP
+Platform Version: 1.0 Device Name: Intel(R) Graphics [0x4905] Max Work Group: 512 Max Compute Units: 96
+########################################################################
+End of output for job 813488.v-qsvr-1.aidevcloud
+Date: Thu 18 Mar 2021 03:47:19 PM PDT
+########################################################################
 
